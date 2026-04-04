@@ -179,3 +179,6 @@ If you find this model useful, please consider citing.
 ```
 ## Disclaimer
 Don't use this model to do bad things. Prompts are sourced from freely available data on the internet.
+
+
+python -m scripts.generate_audio

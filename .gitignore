@@ -11,6 +11,10 @@ __pycache__/
 # C extensions
 *.so
 
+src/chatterbox/
+src/*.egg-info/
+src/*.dist-info/
+
 # Distribution / packaging
 .Python
 build/
