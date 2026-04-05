@@ -9,7 +9,7 @@ def generate_full_audio(
     output_path: str | None = None,
     exaggeration: float = DEFAULT_EXAGGERATION,
     cfg_weight: float = DEFAULT_CFG_WEIGHT,
-    pause_sec: float = 0.3,
+    pause_sec: float = 0.5,
     skip_failed_chunks: bool = False,
 ) -> tuple:
     """
@@ -41,8 +41,8 @@ def generate_full_audio(
             audio, sr = generate_chunk(
                 chunk,
                 voice=voice,
-                exaggeration=exaggeration,
-                cfg_weight=cfg_weight,
+                exaggeration=0.65,
+                cfg_weight=0.4,
             )
             audio_chunks.append(audio)
         except Exception as exc:
