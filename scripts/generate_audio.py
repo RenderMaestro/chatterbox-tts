@@ -5,7 +5,7 @@ from tts.pipeline import generate_full_audio
 with open("scripts/input.txt", "r", encoding="utf-8") as f:
     SCRIPT = f.read()
 
-VOICE = "voices/alex.mp3"  # change if needed
+VOICE = "voices/delegent.mp3"  # change if needed
 
 print("🚀 Starting audio generation...")
 
