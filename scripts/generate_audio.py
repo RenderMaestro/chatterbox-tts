@@ -2,14 +2,14 @@ import soundfile as sf
 from tts.pipeline import generate_full_audio
 
 # Load script
-with open("scripts/input.txt", "r", encoding="utf-8") as f:
+with open("scripts/demo.txt", "r", encoding="utf-8") as f:
     SCRIPT = f.read()
 
-VOICE = "voices/aidan.mp3"  # change if needed
+VOICE = "voices/alex.mp3"  # change if needed
 
 print("🚀 Starting audio generation...")
 
-audio, sr = generate_full_audio(SCRIPT, VOICE)
+audio, sr = generate_full_audio(SCRIPT, VOICE,  breath_sec = 0.15,)
 
 sf.write("output/final_output.wav", audio, sr)
 

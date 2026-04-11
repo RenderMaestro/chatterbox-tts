@@ -73,14 +73,18 @@ def merge_audio(
     chunks: list[np.ndarray],
     sr: int,
     pause_sec: float = 0.3,
+    breath_sec: float = 0.15,
 ) -> np.ndarray:
     """Concatenate audio chunks with a short silence between each."""
     pause = np.zeros(int(pause_sec * sr), dtype=np.float32)
+    breath = np.zeros(int(breath_sec * sr), dtype=np.float32)
     parts = []
     for i, chunk in enumerate(chunks):
         parts.append(chunk.astype(np.float32))
         if i != len(chunks) - 1:
             parts.append(pause)
+        else:
+            parts.append(breath)
     return np.concatenate(parts)
 
 

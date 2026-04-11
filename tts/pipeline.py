@@ -10,6 +10,7 @@ def generate_full_audio(
     exaggeration: float = DEFAULT_EXAGGERATION,
     cfg_weight: float = DEFAULT_CFG_WEIGHT,
     pause_sec: float = 0.5,
+    breath_sec: float = 0.8,
     skip_failed_chunks: bool = False,
 ) -> tuple:
     """
@@ -54,7 +55,7 @@ def generate_full_audio(
     if not audio_chunks:
         raise RuntimeError("No audio chunks were generated successfully.")
 
-    final_audio = merge_audio(audio_chunks, sr, pause_sec=pause_sec)
+    final_audio = merge_audio(audio_chunks, sr, pause_sec=pause_sec,  breath_sec=breath_sec)
     elapsed = time.time() - t0
     duration = len(final_audio) / sr
     print(f"✅ Done — {duration:.1f}s of audio in {elapsed:.1f}s wall time.")
