@@ -2,7 +2,7 @@ import soundfile as sf
 from tts.pipeline import generate_full_audio
 
 # Load script
-with open("scripts/input.txt", "r", encoding="utf-8") as f:
+with open("scripts/demo.txt", "r", encoding="utf-8") as f:
     SCRIPT = f.read()
 
 VOICE = "voices/delegent.mp3"  # change if needed
