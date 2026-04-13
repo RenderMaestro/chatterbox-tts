@@ -1,1 +1,1 @@
- 25,15,50,10
+twenty five, fifteen, fifty, ten
