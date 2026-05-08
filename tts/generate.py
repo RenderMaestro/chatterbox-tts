@@ -2,8 +2,8 @@ import time
 from tts.model import get_model
 
 # Defaults — tweak here or override per call
-DEFAULT_EXAGGERATION = 0.75   # emotional expressiveness (0.0–1.0)
-DEFAULT_CFG_WEIGHT   = 0.35   # classifier-free guidance strength
+DEFAULT_EXAGGERATION = 0.5   # emotional expressiveness (0.0–1.0)
+DEFAULT_CFG_WEIGHT   = 0.7   # classifier-free guidance strength
 
 def generate_chunk(
     text: str,
